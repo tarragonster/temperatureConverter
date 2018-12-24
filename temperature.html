@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    Fahrenheit <input type="text" id="theBox" oninput="Print();"/>
+</p>
+
+Result: <span id="result"></span>
+
+<script>
+
+    function Print() {
+
+        var a = parseInt(document.getElementById("theBox").value);
+
+        document.getElementById("result").innerHTML =theConverter(a);
+    }
+    function theConverter(f) {
+
+        var c = parseFloat((f - 32)/1.8);
+
+        return c;
+    }
+
+</script>
+
+</body>
+</html>
